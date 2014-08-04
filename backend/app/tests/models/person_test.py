@@ -1,6 +1,6 @@
 from datetime import datetime
 from unittest import TestCase
-from backend.app.models.person import sex
+from backend.app.models.person import gender
 from backend.app.tests.test_helpers import create_person
 
 
@@ -10,14 +10,14 @@ class PersonTest(TestCase):
         date_of_birth = datetime.now()
         person = create_person(
             surname='Nekesa', first_name='Patricia',
-            date_of_birth=date_of_birth, gender=sex.FEMALE
+            date_of_birth=date_of_birth, gender=gender.FEMALE
         )
         expected_json = {
-            "surname": "Nekesa",
-            "first_name": "Patricia",
-            "date_of_birth": date_of_birth,
-            "gender": sex.FEMALE,
-            "id": None
+            u"surname": u"Nekesa",
+            u"first_name": u"Patricia",
+            u"date_of_birth": unicode(date_of_birth),
+            u"gender": unicode(gender.FEMALE),
+            u"id": unicode(None)
         }
         person_json = person.jsonify()
         self.assertEqual(person_json, expected_json)

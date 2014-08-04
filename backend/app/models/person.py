@@ -12,11 +12,11 @@ class Person:
 
     def jsonify(self):
         return {
-            "id": self.id,
-            "surname": self.surname,
-            "first_name": self.first_name,
-            "date_of_birth": self.date_of_birth,
-            "gender": self.gender
+            u"id": unicode(self.id),
+            u"surname": unicode(self.surname),
+            u"first_name": unicode(self.first_name),
+            u"date_of_birth": unicode(self.date_of_birth),
+            u"gender": unicode(self.gender)
         }
 
-sex = enum(MALE=0, FEMALE=1)
+gender = enum(MALE="male", FEMALE="female")
