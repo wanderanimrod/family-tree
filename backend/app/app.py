@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from api.routes import setup_routes
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='bower_components')
 
 
 @app.route("/")
