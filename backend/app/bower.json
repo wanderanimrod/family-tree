@@ -14,6 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "vue": "~0.10.6"
+    "vue": "~0.10.6",
+    "semantic": "~0.19.0"
   }
 }
