@@ -1,6 +1,5 @@
 from neo4jrestclient.client import GraphDatabase
-
-from config import neo4j_url
+from backend.app.config import neo4j_url
 
 
 __graph = GraphDatabase(neo4j_url)
