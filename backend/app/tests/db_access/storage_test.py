@@ -8,7 +8,7 @@ from backend.app.db_access import storage
 from backend.app.models.person import Person, gender
 
 
-class DataStoreTest(TestCase):
+class StorageTest(TestCase):
     def setUp(self):
         self.graph = GraphDatabase(neo4j_url)
 
@@ -20,6 +20,14 @@ class DataStoreTest(TestCase):
         storage.add_person(patricia)
         people = self.query('match (node) return node;')
         self.assertEqual(people[0], patricia.jsonify())
+
+    def test_should_provide_all_people_in_graph(self):
+        patricia = Person("Nekesa", "Patricia", datetime.now(), gender.FEMALE)
+        jesse = Person("Wejuli", "Jesse", datetime.now(), gender.MALE)
+        storage.add_person(patricia)
+        storage.add_person(jesse)
+        people = storage.all()
+        self.assertEqual(people, [patricia.jsonify(), jesse.jsonify()])
 
     def query(self, query_string):
         query_sequence = self.graph.query(query_string)

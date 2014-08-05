@@ -1,13 +1,22 @@
 from neo4jrestclient.client import GraphDatabase
+
 from backend.app.config import neo4j_url
 
-graph = GraphDatabase(neo4j_url)
-people = None
+
+__graph = GraphDatabase(neo4j_url)
 
 
 def add_person(person):
-    graph.nodes.create(**person.jsonify())
+    __graph.nodes.create(**person.jsonify())
 
 
 def clear():
-    graph.query(q="MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n, r;")
+    __graph.query(q="MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n, r;")
+
+
+def all():
+    query_sequence = __graph.query('match (node) return node;')
+    results = []
+    for element in query_sequence.elements:
+        results.append(element[0]['data'])
+    return results
