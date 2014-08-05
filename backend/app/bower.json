@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wanderanimrod/family-tree",
+  "authors": [
+    "wanderanimrod <wanderanimrod@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "~0.10.6"
+  }
+}
