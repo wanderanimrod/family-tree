@@ -1,9 +1,8 @@
 #Pycharm files
-virtualenv/*
-*.py[cod]
 .idea/*
-app/play.py
-app/static/*
-app/node_modules/*
-app/bower_components/*
+*.pyc
+application/play.py
+application/static/*
+application/node_modules/*
+application/bower_components/*
 
