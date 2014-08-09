@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/wanderanimrod/family-tree/issues"
   },
-  "homepage": "https://github.com/wanderanimrod/family-tree/blob/master/README.md"
+  "homepage": "https://github.com/wanderanimrod/family-tree/blob/master/README.md",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "partialify": "~3.1.1"
+  }
 }
