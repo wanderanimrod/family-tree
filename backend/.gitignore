@@ -1,3 +1,4 @@
 .idea/*
 app/play.py
+app/node_modules/*
 app/bower_components/*
