@@ -1,5 +1,6 @@
 #Pycharm files
 .idea/*
+*.py[cod]
 *.pyc
 application/play.py
 application/static/*
