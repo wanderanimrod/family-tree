@@ -24,3 +24,9 @@ var text = g.append('text')
     .attr('font-size', 80)
     .attr("fill", "#1D8C5E")
     .text('\uf055')
+
+module.exports = {
+    myFunction: function() {
+        console.log("imported function called")
+    }
+}

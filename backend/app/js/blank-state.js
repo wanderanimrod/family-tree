@@ -1,1 +1,3 @@
-console.log("Blank state js invoked!")
+var lib = require('./app.js')
+
+lib.myFunction()
