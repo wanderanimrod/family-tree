@@ -3,9 +3,9 @@ from datetime import datetime
 
 from neo4jrestclient.client import GraphDatabase
 
-from backend.app.config import neo4j_url
-from backend.app.db_access import storage
-from backend.app.models.person import Person, gender
+from app.config import neo4j_url
+from app.db_access import storage
+from app.models.person import Person, gender
 
 
 class StorageTest(TestCase):

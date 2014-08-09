@@ -1,4 +1,4 @@
-from backend.app.models.enum import enum
+from app.models.enum import enum
 
 
 class Person:

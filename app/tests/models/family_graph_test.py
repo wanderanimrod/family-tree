@@ -1,6 +1,7 @@
 from unittest import TestCase
-from backend.app.models.family_graph import FamilyGraph
-from backend.app.tests.test_helpers import create_person
+
+from app.models.family_graph import FamilyGraph
+from app.tests.test_helpers import create_person
 
 
 class FamilyGraphTest(TestCase):

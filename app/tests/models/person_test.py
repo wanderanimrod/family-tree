@@ -1,7 +1,8 @@
 from datetime import datetime
 from unittest import TestCase
-from backend.app.models.person import gender
-from backend.app.tests.test_helpers import create_person
+
+from app.models.person import gender
+from app.tests.test_helpers import create_person
 
 
 class PersonTest(TestCase):

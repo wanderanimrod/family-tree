@@ -1,5 +1,6 @@
 from flask.ext import restful
-from backend.app.db_access import storage
+
+from app.db_access import storage
 
 
 class People(restful.Resource):
