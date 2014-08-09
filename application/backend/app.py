@@ -13,6 +13,7 @@ def hello():
 setup_routes(app)
 
 
+# Should not have this static_folder thing after we user browserify to build css
 @app.route("/<path:filename>")
 def custom_static(filename):
     return send_from_directory(app.root_path + "/static/", filename)

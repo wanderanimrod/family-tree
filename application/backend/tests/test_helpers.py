@@ -1,6 +1,5 @@
 from datetime import datetime
-
-from application.models.person import gender, Person
+from application.backend.models.person import Person, gender
 
 
 def create_person(surname='Wandera', first_name='Nimrod', date_of_birth=datetime.now(), gender=gender.MALE):

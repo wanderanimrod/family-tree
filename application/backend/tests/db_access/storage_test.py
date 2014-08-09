@@ -2,10 +2,9 @@ from unittest import TestCase
 from datetime import datetime
 
 from neo4jrestclient.client import GraphDatabase
-
-from application.config import neo4j_url
-from application.db_access import storage
-from application.models.person import Person, gender
+from application.backend.config import neo4j_url
+from application.backend.db_access import storage
+from application.backend.models.person import Person, gender
 
 
 class StorageTest(TestCase):
