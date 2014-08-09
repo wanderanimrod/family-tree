@@ -8,7 +8,7 @@ module.exports = function (grunt) {
         browserify: {
             app: {
                 src: ['js/**/*.js'],
-                dest: 'static//build.js'
+                dest: 'static/build.js'
             }
         },
 

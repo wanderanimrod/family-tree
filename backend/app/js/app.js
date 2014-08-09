@@ -1,3 +1,5 @@
+var d3 = require('d3-browserify')
+
 var canvas = d3.select("#canvas");
 var canvasWidth = canvas.style("width").replace("px", "")
 var canvasHeight = canvas.style("height").replace("px", "")
