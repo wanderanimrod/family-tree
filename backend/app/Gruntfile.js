@@ -7,14 +7,14 @@ module.exports = function (grunt) {
 
         browserify: {
             app: {
-                src: ['static/js/**/*.js'],
+                src: ['js/**/*.js'],
                 dest: 'static//build.js'
             }
         },
 
         watch: {
             browserify: {
-                files: ['static/js/**/*.js'],
+                files: ['js/**/*.js'],
                 tasks: ['browserify']
             }
         }
