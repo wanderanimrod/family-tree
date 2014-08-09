@@ -3,7 +3,7 @@
 *.py[cod]
 *.pyc
 application/play.py
-application/static/*
+application/backend/static/*
 application/node_modules/*
 application/client/bower_components/*
 
