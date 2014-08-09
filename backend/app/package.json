@@ -23,6 +23,7 @@
     "grunt-browserify": "~2.1.4"
   },
   "dependencies": {
-    "d3-browserify": "~3.3.13"
+    "d3-browserify": "~3.3.13",
+    "vue": "~0.10.6"
   }
 }

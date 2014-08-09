@@ -2,7 +2,6 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
 
-        //Read the package.json (optional)
         pkg: grunt.file.readJSON('package.json'),
 
         browserify: {
