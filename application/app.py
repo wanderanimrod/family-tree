@@ -2,7 +2,8 @@ from flask import Flask, render_template, send_from_directory
 from api.routes import setup_routes
 
 
-app = Flask(__name__, static_folder='bower_components')
+# Should not have this static_folder thing after we user browserify to build css
+app = Flask(__name__, static_folder='client/bower_components')
 
 
 @app.route("/")

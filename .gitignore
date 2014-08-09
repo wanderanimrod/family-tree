@@ -5,5 +5,5 @@
 application/play.py
 application/static/*
 application/node_modules/*
-application/bower_components/*
+application/client/bower_components/*
 
