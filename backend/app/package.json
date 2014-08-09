@@ -1,0 +1,25 @@
+{
+  "name": "tree",
+  "version": "0.0.0",
+  "description": "\"Collaborative family tree creation and querying app\"",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wanderanimrod/family-tree"
+  },
+  "keywords": [
+    "Family",
+    "tree"
+  ],
+  "author": "wanderanimrod",
+  "bugs": {
+    "url": "https://github.com/wanderanimrod/family-tree/issues"
+  },
+  "homepage": "https://github.com/wanderanimrod/family-tree/blob/master/README.md"
+}
