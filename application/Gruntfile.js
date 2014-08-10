@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 
         watch: {
             browserify: {
-                files: ['js/**/*.js'],
+                files: ['client/js/**/*.js'],
                 tasks: ['browserify']
             }
         }
