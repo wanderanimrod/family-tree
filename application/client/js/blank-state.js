@@ -9,15 +9,9 @@ function setupBlankState() {
         .attr("width", canvasWidth)
         .attr("height", canvasHeight)
 
-    var personGroup = svg.append("svg")
-        .attr("x", 100)
-        .attr("y", 100)
-
-    var g = personGroup.append("g")
-
     var center = {x: canvasWidth / 2, y: canvasHeight / 2}
 
-    var text = g.append('text')
+    var text = svg.append('text')
         .attr("x", center.x)
         .attr("y", center.y)
         .attr("text-anchor", "middle")
