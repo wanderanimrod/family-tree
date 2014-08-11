@@ -15,3 +15,7 @@ def json_has_expected_keys(string, expected_keys):
         if key not in jsonified_string:
             return False
     return True
+
+
+def dict_to_json(dictionary):
+    return str(dictionary).replace("'", '"')
