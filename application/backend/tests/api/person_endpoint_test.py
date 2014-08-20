@@ -30,6 +30,12 @@ class PersonEndpointTest(TestCase):
         returned_people = self.all_people()
         self.assertEqual(returned_people, [expected_person])
 
+    def test_should_throw_error_when_person_json_is_not_valid(self):
+        bad_person = dict_to_json({"first_name": 'Patricia'})
+        post = self.app.post('/people/', data=bad_person, headers={'Content-Type': 'application/json'})
+        self.assertEqual(post.status_code, 400)
+        self.assertEqual(post.data, dict_to_json({'error': 'person JSON passed not valid'}))
+
     def all_people(self):
         get = self.app.get('/people/')
         return extract_value_from_json(get.data, "people")

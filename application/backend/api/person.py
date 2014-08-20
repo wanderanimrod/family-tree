@@ -12,6 +12,9 @@ class People(restful.Resource):
 
     def post(self):
         person_json = request.get_json()
-        person = create_person_from_dict(person_json)
+        try:
+            person = create_person_from_dict(person_json)
+        except Exception:
+            return {"error": "person JSON passed not valid"}, 400
         storage.add_person(person)
         return {}, 201
