@@ -26,6 +26,7 @@
     "d3-browserify": "~3.3.13",
     "vue": "~0.10.6",
     "superagent": "~0.18.2",
-    "bluebird": "~2.2.2"
+    "bluebird": "~2.2.2",
+    "jquery": "~2.1.1"
   }
 }
