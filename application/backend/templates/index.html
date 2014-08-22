@@ -3,10 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
     <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='platform/platform.js') }}"></script>
+    <link rel="import" href="{{ url_for('static', filename='polymer/polymer.html') }}">
+    <link rel="import" href="{{ url_for('custom_static', filename='blank/template.html') }}">
     <title>Tree</title>
 </head>
 <body>
-<div id="canvas" style="width: 1400px; height: 750px"></div>
+<blank-state></blank-state>
 <script src="{{ url_for('custom_static', filename='build.js')}}"></script>
 </body>
 </html>
