@@ -2,19 +2,21 @@
 <html>
 <head lang="en">
     <title>Tree</title>
-    
+
     <meta charset="UTF-8">
     <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <script src="{{ url_for('static', filename='platform/platform.js') }}"></script>
     <link rel="import" href="{{ url_for('static', filename='polymer/polymer.html') }}">
 
+
     <script src="{{ url_for('static', filename='bluebird/js/browser/bluebird.js') }}"></script>
     <script src="{{ url_for('static', filename='superagent/superagent.js') }}"></script>
+    <script src="{{ url_for('static', filename='d3/d3.js') }}"></script>
     <script src="{{ url_for('custom_static', filename='main.js') }}"></script>
 
     <link rel="import" href="{{ url_for('custom_static', filename='blank-state/blank-state.html') }}">
 </head>
-<body>
+<body fullbleed vertical layout center center-justified>
 <blank-state></blank-state>
 </body>
 </html>

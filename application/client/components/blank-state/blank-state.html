@@ -1,7 +1,14 @@
-<polymer-element name="blank-state" noscript>
+<polymer-element name="blank-state" noscript xmlns="http://www.w3.org/1999/html">
+    <link rel="import" href="/bower_components/core-icons/core-icons.html">
+    <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
     <template>
-        <div id="canvas" style="width: 1400px; height: 750px"></div>
+        <style>
+            paper-icon-button::shadow core-icon {
+                color: #2F39A5;
+                height: 70px;
+                width: 70px;
+            }
+        </style>
+        <paper-icon-button icon="add-circle"></paper-icon-button>
     </template>
-    <script src="/bower_components/d3/d3.js"></script>
-    <script src="blank-state.js"></script>
 </polymer-element>
