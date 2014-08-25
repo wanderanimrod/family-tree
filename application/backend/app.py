@@ -16,7 +16,7 @@ setup_routes(app)
 # Should not have this non-default thing after we use browserify to build css
 @app.route("/<path:filename>")
 def custom_static(filename):
-    return send_from_directory(app.root_path + "/static/", filename)
+    return send_from_directory(app.root_path + "/../client/components", filename)
 
 if __name__ == "__main__":
     app.run()
