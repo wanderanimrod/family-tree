@@ -1,14 +1,15 @@
 <polymer-element name="blank-state" noscript xmlns="http://www.w3.org/1999/html">
     <link rel="import" href="/bower_components/core-icons/core-icons.html">
     <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="/bower_components/paper-fab/paper-fab.html">
     <template>
         <style>
-            paper-icon-button::shadow core-icon {
-                color: #2F39A5;
-                height: 70px;
-                width: 70px;
+            paper-fab {
+                color: #FFF;
+                background: #2F39A5;
             }
         </style>
-        <paper-icon-button icon="add-circle"></paper-icon-button>
+        <paper-fab icon="add" onclick="showAddPersonDialog()"></paper-fab>
     </template>
+    <script src="blank-state.js"></script>
 </polymer-element>
