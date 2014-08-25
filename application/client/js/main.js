@@ -1,8 +1,8 @@
-var Promise = require('bluebird');
-var get = Promise.promisify(require('superagent').get);
-var blankState = require('./blank-state.js');
+var get = Promise.promisify(superagent.get);
 
 get('/people/').then(function(response) {
     var people = response.body.people;
-    if(!people.length) blankState.draw();
+    if(!people.length) {
+        //TODO, render the blank-state.html into the page. Cannot select shadow DOM elements.
+    }
 });
