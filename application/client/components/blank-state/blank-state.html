@@ -1,14 +1,22 @@
-<polymer-element name="blank-state" noscript xmlns="http://www.w3.org/1999/html">
+<polymer-element name="blank-state" xmlns="http://www.w3.org/1999/html">
     <link rel="import" href="/bower_components/core-icons/core-icons.html">
     <link rel="import" href="/bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
+    <link rel="import" href="/bower_components/paper-button/paper-button.html">
+    <link rel="import" href="/bower_components/paper-dialog/paper-dialog-transition.html">
     <template>
         <style>
-            paper-fab {
+            paper-fab, paper-button#addPersonButton {
                 color: #FFF;
                 background: #2F39A5;
             }
         </style>
-        <paper-fab icon="add" onclick="showAddPersonDialog()"></paper-fab>
+        <paper-fab icon="add" on-click="{{showDialog}}"></paper-fab>
+        <paper-dialog id="person" heading="New Person" transition="paper-dialog-transition-center">
+            <p>Content</p>
+            <paper-button id="addPersonButton" label="Add" affirmative on-click="{{addPerson}}" raisedButton></paper-button>
+            <paper-button label="Cancel" dismissive></paper-button>
+        </paper-dialog>
     </template>
     <script src="blank-state.js"></script>
 </polymer-element>
