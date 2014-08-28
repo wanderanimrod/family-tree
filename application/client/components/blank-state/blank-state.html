@@ -6,15 +6,15 @@
     <link rel="import" href="/bower_components/paper-dialog/paper-dialog-transition.html">
     <template>
         <style>
-            paper-fab, paper-button#addPersonButton {
+            .add-colored {
                 color: #FFF;
                 background: #2F39A5;
             }
         </style>
-        <paper-fab icon="add" on-click="{{showDialog}}"></paper-fab>
+        <paper-fab class="add-colored" icon="add" on-click="{{showDialog}}"></paper-fab>
         <paper-dialog id="person" heading="New Person" transition="paper-dialog-transition-center">
             <p>Content</p>
-            <paper-button id="addPersonButton" label="Add" affirmative on-click="{{addPerson}}" raisedButton></paper-button>
+            <paper-button class="add-colored" id="addPersonButton" label="Add" affirmative on-click="{{addPerson}}" raisedButton></paper-button>
             <paper-button label="Cancel" dismissive></paper-button>
         </paper-dialog>
     </template>

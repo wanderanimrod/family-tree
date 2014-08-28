@@ -7,6 +7,7 @@
     <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <script src="{{ url_for('static', filename='platform/platform.js') }}"></script>
     <link rel="import" href="{{ url_for('static', filename='polymer/polymer.html') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,800,700,300,400,600' rel='stylesheet' type='text/css'>
 
 
     <script src="{{ url_for('static', filename='bluebird/js/browser/bluebird.js') }}"></script>
@@ -15,6 +16,11 @@
     <script src="{{ url_for('custom_static', filename='main.js') }}"></script>
 
     <link rel="import" href="{{ url_for('custom_static', filename='blank-state/blank-state.html') }}">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
 </head>
 <body fullbleed vertical layout center center-justified>
 <blank-state></blank-state>
