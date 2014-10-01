@@ -15,6 +15,6 @@ class People(restful.Resource):
         try:
             person = create_person_from_dict(person_json)
         except Exception:
-            return {"error": "person JSON passed not valid"}, 400
+            return {"error": "person JSON passed not valid"}, 403
         storage.add_person(person)
         return {}, 201
