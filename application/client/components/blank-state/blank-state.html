@@ -14,11 +14,12 @@
         <paper-dialog id="person" heading="New Person" transition="paper-dialog-transition-center">
             <paper-input label="Surname" floatingLabel="true"></paper-input>
             <br>
-            <paper-input type="date" label="First Name" floatingLabel="true"></paper-input>
+            <paper-input label="First Name" floatingLabel="true"></paper-input>
             <section>
                 <core-selector selected="1">
                     <paper-icon-button fill isToggle icon="custom-icons:fancy-circles"></paper-icon-button>
-                    <paper-icon-button fill isToggle icon="custom-icons:female"></paper-icon-button>
+                    <fontawesome-icon value="fa fa-glass"></fontawesome-icon>
+                    <paper-icon-button fill isToggle icon="fa-female"></paper-icon-button>
                 </core-selector>
             </section>
             <paper-button class="add" id="addPersonButton" label="Add" affirmative on-click="{{addPerson}}"
