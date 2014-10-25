@@ -10,11 +10,8 @@ def json_response_to_dict(response_data):
 
 
 def json_has_expected_keys(string, expected_keys):
-    jsonified_string = json.loads(string)
-    for key in expected_keys:
-        if key not in jsonified_string:
-            return False
-    return True
+    dict_from_json = json.loads(string)
+    return reduce(lambda x, y: x and y, [key in dict_from_json for key in expected_keys])
 
 
 def dict_to_json(dictionary):
