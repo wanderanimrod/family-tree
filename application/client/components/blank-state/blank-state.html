@@ -4,17 +4,25 @@
     <link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
     <link rel="import" href="/bower_components/paper-button/paper-button.html">
     <link rel="import" href="/bower_components/paper-dialog/paper-dialog-transition.html">
+    <link rel="import" href="/bower_components/paper-input/paper-input.html">
+    <link rel="import" href="/bower_components/core-selector/core-selector.html">
+    <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="/custom-icons/custom-icon-set.html">
     <template>
-        <style>
-            .add-colored {
-                color: #FFF;
-                background: #2F39A5;
-            }
-        </style>
-        <paper-fab class="add-colored" icon="add" on-click="{{showDialog}}"></paper-fab>
+        <link rel="stylesheet" href="blank-state.css">
+        <paper-fab class="add" icon="add" on-click="{{showDialog}}"></paper-fab>
         <paper-dialog id="person" heading="New Person" transition="paper-dialog-transition-center">
-            <p>Content</p>
-            <paper-button class="add-colored" id="addPersonButton" label="Add" affirmative on-click="{{addPerson}}" raisedButton></paper-button>
+            <paper-input label="Surname" floatingLabel="true"></paper-input>
+            <br>
+            <paper-input type="date" label="First Name" floatingLabel="true"></paper-input>
+            <section>
+                <core-selector selected="1">
+                    <paper-icon-button fill isToggle icon="custom-icons:fancy-circles"></paper-icon-button>
+                    <paper-icon-button fill isToggle icon="custom-icons:female"></paper-icon-button>
+                </core-selector>
+            </section>
+            <paper-button class="add" id="addPersonButton" label="Add" affirmative on-click="{{addPerson}}"
+                          ></paper-button>
             <paper-button label="Cancel" dismissive></paper-button>
         </paper-dialog>
     </template>
