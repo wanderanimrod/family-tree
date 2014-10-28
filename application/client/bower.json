@@ -21,6 +21,7 @@
     "superagent": "~0.18.2",
     "bluebird": "~2.3.2",
     "d3": "~3.4.11",
-    "fontawesome-icon": "~0.0.2"
+    "fontawesome-icon": "~0.0.2",
+    "vue": "~0.10.6"
   }
 }
