@@ -1,3 +1,6 @@
+var vue = require('vue');
+var superagent = require('superagent');
+
 var fileFromUrl = function(url, el) {
     superagent.get(url, function(response) {
         el.innerHTML = response.text;
@@ -10,11 +13,11 @@ var newComponent = function(cName, opts) {
         fileFromUrl(this.$options.templateFromFile, this.$el);
         oldCreated && oldCreated.call(this);
     };
-    return Vue.component(cName, opts);
+    return vue.component(cName, opts);
 };
 
 newComponent('blank-state', {
-    templateFromFile: '/blank-state/blank-state.html',
+    templateFromFile: "client/components/blank-state/blank-state.html",
     methods: {
         showAddPersonDialog: function() {
 

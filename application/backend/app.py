@@ -1,22 +1,17 @@
 from flask import Flask, render_template, send_from_directory
-from application.backend.api.routes import setup_routes
+from application.backend.api.routes import setup_api_routes
 
 
 # Should not have this static_folder thing after we use browserify to build css
-app = Flask(__name__, static_folder='../client/bower_components')
+app = Flask(__name__, static_folder='../client')
+app.debug = True
 
 
 @app.route("/")
-def hello():
+def index():
     return render_template("index.html")
 
-setup_routes(app)
-
-
-# Should not have this non-default thing after we use browserify to build css
-@app.route("/<path:filename>")
-def custom_static(filename):
-    return send_from_directory(app.root_path + "/../client/components", filename)
+setup_api_routes(app)
 
 if __name__ == "__main__":
     app.run()

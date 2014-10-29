@@ -18,10 +18,6 @@
     "font-awesome": "~4.1.0",
     "polymer": "Polymer/polymer#~0.3.5",
     "paper-elements": "Polymer/paper-elements#~0.3.5",
-    "superagent": "~0.18.2",
-    "bluebird": "~2.3.2",
-    "d3": "~3.4.11",
-    "fontawesome-icon": "~0.0.2",
-    "vue": "~0.10.6"
+    "fontawesome-icon": "~0.0.2"
   }
 }
