@@ -28,8 +28,8 @@ class PersonEndpointTest(TestCase):
     def test_should_add_person(self):
         expected_person = {'first_name': 'Patricia', 'surname': 'Nekesa', 'gender': 'female',
                            'id': 'None', 'date_of_birth': '2012-02-02'}
-        json = dict_to_json(expected_person)
-        response = self.app.post(ENDPOINT_URL, data=json, headers={'Content-Type': 'application/json'})
+        payload = dict_to_json(expected_person)
+        response = self.app.post(ENDPOINT_URL, data=payload, headers={'Content-Type': 'application/json'})
         self.assertEqual(response.status_code, 201)
 
         returned_people = self.all_people()
