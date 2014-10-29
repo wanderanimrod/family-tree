@@ -1,6 +1,6 @@
 newComponent = require('../common/vue-extensions').newComponent;
 
-newComponent('blank-state', {
+var component = newComponent('blank-state', {
     templateFromFile: "client/components/blank-state/blank-state.html",
     methods: {
         showAddPersonDialog: function() {
@@ -8,3 +8,5 @@ newComponent('blank-state', {
         }
     }
 });
+
+module.exports = component;
