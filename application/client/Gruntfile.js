@@ -12,6 +12,12 @@ module.exports = function(grunt) {
                     'build/app.js': ['components/**/*.js']
                 }
             }
+        },
+        karma: {
+            unit: {
+                configFile: 'spec/karma.conf.js',
+                singleRun: true
+            }
         }
     });
 };
