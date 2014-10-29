@@ -5,10 +5,6 @@ def extract_value_from_json(string, key):
     return json.loads(string)[key]
 
 
-def json_response_to_dict(response_data):
-    return json.loads(response_data)
-
-
 def json_has_expected_keys(string, expected_keys):
     dict_from_json = json.loads(string)
     return reduce(lambda x, y: x and y, [key in dict_from_json for key in expected_keys])

@@ -4,4 +4,4 @@ from person import People
 
 def setup_api_routes(app):
     api = restful.Api(app)
-    api.add_resource(People, '/people/')
+    api.add_resource(People, '/api/people/')
