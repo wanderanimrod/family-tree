@@ -1,5 +1,5 @@
-var vue = require('vue');
+var Vue = require('vue');
 
-var vm = new vue({
+var vm = new Vue({
     el: '#landing-page'
 });
