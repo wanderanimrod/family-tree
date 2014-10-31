@@ -17,9 +17,10 @@
     "karma": "~0.12.24",
     "grunt-karma": "~0.9.0",
     "karma-phantomjs-launcher": "~0.1.4",
-    "karma-jasmine": "~0.1.5",
     "browserify": "^4.0.0",
     "karma-browserify": "~0.2.1",
-    "grunt-contrib-jasmine": "~0.8.1"
+    "grunt-contrib-jasmine": "~0.8.1",
+    "jquery": "~2.1.1",
+    "karma-jasmine": "~0.2.2"
   }
 }
