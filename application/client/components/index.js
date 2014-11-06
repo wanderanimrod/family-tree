@@ -1,9 +1,8 @@
 var Vue = require('vue');
 
-var componentRegistry = require('./component-registry.js');
-
-var vm = new Vue({
+var options = {
     el: '#landing-page'
-});
+};
+var vm = new Vue(options);
 
-module.exports = {viewModel: vm, components: componentRegistry};
+module.exports = options;

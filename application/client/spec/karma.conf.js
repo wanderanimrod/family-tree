@@ -16,14 +16,16 @@ module.exports = function(config) {
             'spec/**/*.js': ['browserify']
         },
 
+        browserify: {
+            transform: [require('stringify')()]
+        },
+
         port: 8080,
 
-        browsers: [
-            'PhantomJS'
-        ],
+        browsers: ['Chrome'],
 
         plugins: [
-            'karma-phantomjs-launcher',
+            "karma-chrome-launcher",
             'karma-jasmine',
             'karma-browserify'
         ],
