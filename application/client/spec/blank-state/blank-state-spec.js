@@ -1,10 +1,21 @@
 describe('Blank State Component', function() {
-    var blankStateOpts;
+    var blankState;
     beforeEach(function() {
-        blankStateOpts = require('../../components/blank-state/blank-state.js');
+        blankState = require('../../components/blank-state/blank-state.js');
     });
 
-    it('should pass', function() {
-        expect(true).toBeTruthy();
+    it('should make the new person dialog not show by default', function() {
+        expect(blankState.data.showDialog).toBeFalsy();
+    });
+
+    it('should toggle visibility of new person dialog', function() {
+        var mockVM = {showDialog: false};
+        blankState.methods.toggleAddPersonDialog.call(mockVM);
+        expect(mockVM.showDialog).toBeTruthy();
+    });
+
+    it('should import the blank state template', function() {
+        var expectedTemplate = require('../../components/blank-state/blank-state.html');
+        expect(blankState.template).toBe(expectedTemplate)
     });
 });

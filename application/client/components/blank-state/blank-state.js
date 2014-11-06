@@ -1,13 +1,13 @@
-Vue = require('vue');
+require('vue');
 
-var options = {
+module.exports = {
     template: require("./blank-state.html"),
+    data: {
+        showDialog: false
+    },
     methods: {
-        showAddPersonDialog: function() {
-            console.log('**************', "Going to show dialog", '**************');
+        toggleAddPersonDialog: function() {
+            this.showDialog = !this.showDialog;
         }
     }
 };
-var component = Vue.component('blank-state', options);
-
-module.exports = options;

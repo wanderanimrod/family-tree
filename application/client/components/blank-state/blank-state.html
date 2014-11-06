@@ -9,8 +9,8 @@
 
 <link rel="stylesheet" href="client/components/blank-state/blank-state.css">
 
-<paper-fab v-on="click: showAddPersonDialog" class="add" icon="add"></paper-fab>
-<paper-dialog id="person" heading="New Person" transition="paper-dialog-transition-center">
+<paper-fab v-on="click: toggleAddPersonDialog" class="add" icon="add"></paper-fab>
+<paper-dialog v-attr="opened: showDialog" heading="New Person" transition="paper-dialog-transition-center">
     <paper-input label="Surname" floatingLabel="true"></paper-input>
     <br>
     <paper-input label="First Name" floatingLabel="true"></paper-input>
@@ -21,7 +21,6 @@
             <paper-icon-button fill isToggle icon="fa-female"></paper-icon-button>
         </core-selector>
     </section>
-    <paper-button class="add" id="addPersonButton" label="Add" affirmative on-click="{{addPerson}}"
-            ></paper-button>
-    <paper-button label="Cancel" dismissive></paper-button>
+    <paper-button class="add" label="Add" affirmative></paper-button>
+    <paper-button label="Cancel" dismissive v-on="click: toggleAddPersonDialog"></paper-button>
 </paper-dialog>
