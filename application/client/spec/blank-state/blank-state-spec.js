@@ -5,7 +5,7 @@ describe('Blank State Component', function() {
     });
 
     it('should be registered in the component registry', function() {
-        var components = require('../../components/component-registry');
-        expect(components).toContain(blankState);
+        var registry = require('../../components/component-registry');
+        expect(registry).toContain(blankState);
     });
 });
