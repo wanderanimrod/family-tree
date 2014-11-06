@@ -1,10 +1,10 @@
-newComponent = require('../common/vue-extensions').newComponent;
+Vue = require('vue');
 
-var component = newComponent('blank-state', {
-    templateFromFile: "client/components/blank-state/blank-state.html",
+var component = Vue.component('blank-state', {
+    template: require("./blank-state.html"),
     methods: {
         showAddPersonDialog: function() {
-
+            console.log('**************', "Going to show dialog", '**************');
         }
     }
 });

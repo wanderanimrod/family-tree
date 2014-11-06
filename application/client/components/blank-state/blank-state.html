@@ -8,7 +8,8 @@
 <link rel="import" href="client/bower_components/paper-icon-button/paper-icon-button.html">
 
 <link rel="stylesheet" href="client/components/blank-state/blank-state.css">
-<paper-fab class="add" icon="add"></paper-fab>
+
+<paper-fab v-on="click: showAddPersonDialog" class="add" icon="add"></paper-fab>
 <paper-dialog id="person" heading="New Person" transition="paper-dialog-transition-center">
     <paper-input label="Surname" floatingLabel="true"></paper-input>
     <br>
