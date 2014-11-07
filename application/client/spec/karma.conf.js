@@ -17,20 +17,22 @@ module.exports = function(config) {
         },
 
         browserify: {
+            debug: true,
             transform: [require('stringify')()]
         },
 
         port: 8080,
 
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
 
         plugins: [
-            "karma-chrome-launcher",
+            "karma-phantomjs-launcher",
             'karma-jasmine',
-            'karma-browserify'
+            'karma-bro'
         ],
 
-        singleRun: false,
+        // if false, makes karma test runner watch your tests and rerun them when changes are made.
+        singleRun: true,
 
         colors: true,
 

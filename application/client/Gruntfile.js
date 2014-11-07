@@ -2,13 +2,17 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         watch: {
-            files: ['components/**/*.js'],
+            files: [
+                'components/**/*.js',
+                'components/**/*.html',
+                'models/**/*.js'
+            ],
             tasks: ['browserify']
         },
         browserify: {
             dist: {
                 files: {
-                    'build/app.js': ['components/**/*.js']
+                    'build/app.js': ['components/**/*.js', 'models/**/*.js']
                 },
                 options: {
                     transform: [require('stringify')()]
@@ -17,8 +21,7 @@ module.exports = function(grunt) {
         },
         karma: {
             unit: {
-                configFile: 'spec/karma.conf.js',
-                singleRun: true
+                configFile: 'spec/karma.conf.js'
             }
         }
     });
