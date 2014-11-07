@@ -6,9 +6,9 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "vue": "~0.10.6",
-    "bluebird": "~2.3.10",
+    "d3": "~3.4.13",
     "superagent": "~0.20.0",
-    "d3": "~3.4.13"
+    "superagent-promise": "~0.2.0"
   },
   "devDependencies": {
     "grunt-browserify": "~3.1.0",
