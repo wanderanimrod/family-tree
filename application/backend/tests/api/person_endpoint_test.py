@@ -38,7 +38,7 @@ class PersonEndpointTest(TestCase):
     def test_should_throw_error_when_person_json_is_not_valid(self):
         bad_person = dict_to_json({"first_name": 'Patricia'})
         response = self.app.post(ENDPOINT_URL, data=bad_person, headers={'Content-Type': 'application/json'})
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 400)
         self.assertEqual(json.loads(response.data), {'error': 'person JSON passed not valid'})
 
     def all_people(self):
