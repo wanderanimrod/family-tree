@@ -41,19 +41,27 @@
             <label class="mini">Date of Birth</label>
 
             <div class="ui labeled input">
-                <date-input></date-input>
+                <date-input v-with="person"></date-input>
+                <div class="ui corner label">
+                    <i class="asterisk icon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="mini">Gender</label>
+
+            <div class="ui fluid labeled input">
+                <core-selector v-on="core-select: genderChanged">
+                    <paper-button fill isToggle id="gender-female">FEMALE</paper-button>
+                    <paper-button fill isToggle id="gender-male">MALE</paper-button>
+                </core-selector>
                 <div class="ui corner label">
                     <i class="asterisk icon"></i>
                 </div>
             </div>
         </div>
     </div>
-    <section>
-        <core-selector selected="1">
-            <paper-icon-button fill isToggle icon="custom-icons:fancy-circles"></paper-icon-button>
-            <paper-icon-button fill isToggle icon="fa-female"></paper-icon-button>
-        </core-selector>
-    </section>
+
     <paper-button class="add" label="Add" v-on="click: addPerson" affirmative></paper-button>
     <paper-button label="Cancel" dismissive v-on="click: toggleAddPersonDialog"></paper-button>
 </paper-dialog>
